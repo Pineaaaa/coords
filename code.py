@@ -41,6 +41,8 @@ def randomnum(min_val, max_val):
 def generate_coordinates(region):
     if region in ["europe", "africa", "asia", "oceania", "antarctica", "north america", "south america"]:
         countries = world[world["CONTINENT"].str.lower() == region]
+    elif region=="cyprus":
+        countries=world[world["ADMIN"].str.lower().isin(["cyprus","northern cyprus"])]
     else:
         countries = world[world["ADMIN"].str.lower() == region]
 
@@ -91,3 +93,4 @@ while True:
     iteration += 1
 
     user_input = input("\nPress enter to generate another coordinate: \n\n")
+
