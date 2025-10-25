@@ -1,5 +1,7 @@
 Coordinate generator !!
 
+Use with shell "python coords.py [region]
+
 Generate true random coordinates within any region on the list:
 
 Africa,
