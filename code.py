@@ -39,20 +39,8 @@ def randomnum(min_val, max_val):
         raise RuntimeError("Failed to fetch random number from random.org")
 
 def generate_coordinates(region):
-    if region == "europe":
-        countries = world[world["CONTINENT"].str.lower() == "europe"]
-    elif region == "africa":
-        countries = world[world["CONTINENT"].str.lower() == "africa"]
-    elif region == "asia":
-        countries = world[world["CONTINENT"].str.lower() == "asia"]
-    elif region == "oceania":
-        countries = world[world["CONTINENT"].str.lower() == "oceania"]
-    elif region == "antarctica":
-        countries = world[world["CONTINENT"].str.lower() == "antarctica"]
-    elif region == "north america":
-        countries = world[world["CONTINENT"].str.lower() == "north america"]
-    elif region == "south america":
-        countries = world[world["CONTINENT"].str.lower() == "south america"]
+    if region in ["europe", "africa", "asia", "oceania", "antarctica", "north america", "south america"]:
+        countries = world[world["CONTINENT"].str.lower() == region]
     else:
         countries = world[world["ADMIN"].str.lower() == region]
 
@@ -103,4 +91,3 @@ while True:
     iteration += 1
 
     user_input = input("\nPress enter to generate another coordinate: \n\n")
-
