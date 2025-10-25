@@ -1,14 +1,14 @@
 import json
 import time
-import requests # type: ignore
+import requests
 import math
-import folium # type: ignore
+import folium
 import webbrowser
 import os
-import clipboard # type: ignore
-import geopandas as gpd # type: ignore
-from shapely.geometry import Point # type: ignore
-from shapely.ops import unary_union # type: ignore
+import clipboard
+import geopandas as gpd
+from shapely.geometry import Point
+from shapely.ops import unary_union
 import sys
 
 fetches=0
@@ -103,3 +103,4 @@ while True:
     iteration += 1
 
     user_input = input("\nPress enter to generate another coordinate: \n\n")
+
